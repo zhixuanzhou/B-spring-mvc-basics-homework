@@ -1,6 +1,11 @@
 package com.thoughtworks.capacity.gtb.mvc.UserModel;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class User {
+
 
     public final String username;
     public final String password;
