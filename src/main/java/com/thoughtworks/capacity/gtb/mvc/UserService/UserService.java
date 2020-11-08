@@ -22,7 +22,7 @@ public class UserService {
         if(userList.containsKey(userRequest.getUsername())) {
            throw new DuplicateUserNameException("This user alr exists");
         }
-        User newUser = new User(userRequest.getEmail(), userRequest.getPassword(), userRequest.getEmail());
+        User newUser = new User(userRequest.getId(), userRequest.getEmail(), userRequest.getPassword(), userRequest.getEmail());
         this.userList.put(newUser.getUsername(), newUser);
     }
 

@@ -7,6 +7,8 @@ import javax.validation.constraints.Size;
 
 public class UserRequest {
 
+    public Integer id;
+
     @NotBlank(message = "username cannot be blank.")
     @Pattern(regexp="[a-zA-Z0-9_]+", message="only numbers, letters and underscores are allowed for username.")
     @Size(min=3, max=10, message="the length of username should between 3 and 10.")
@@ -23,6 +25,10 @@ public class UserRequest {
         this.username = username;
         this.password = password;
         this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getUsername() {
